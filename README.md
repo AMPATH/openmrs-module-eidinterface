@@ -5,11 +5,21 @@ This module provides the following endpoints for access to information requested
 
 getPatientStatus
 ----------------
+
+Accepts a list of identifiers for validation, one per line.
+
+```
+101-6
+1-2
+999-3
+XXAS-X
+```
+
+... and the POST ...
+
 ```
 curl -i -X POST --data-binary @identifiers.txt -H "Content-type: text/plain" -u jkeiper https://amrsresearch1.ampath.or.ke:8443/amrs/module/eidinterface/getPatientStatus.htm
 ```
-
-Accepts a list of identifiers for validation, one per line.
 
 
 Returns a CSV in the following format:
