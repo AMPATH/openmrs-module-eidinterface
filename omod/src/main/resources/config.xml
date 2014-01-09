@@ -15,8 +15,19 @@
 	<require_version>${openMRSVersion}</require_version>
 	<!-- / Module Properties -->
 
-	
-	<!-- Module Activator -->
+    <!-- filters -->
+
+    <filter>
+        <filter-name>EID Interface Web Service Authorization</filter-name>
+        <filter-class>org.openmrs.module.eidinterface.web.filter.EIDAuthorizationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EID Interface Web Service Authorization</filter-name>
+        <url-pattern>/module/eidinterface/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Module Activator -->
 	<activator>${project.parent.groupId}.${project.parent.artifactId}.EIDInterfaceActivator</activator>
 	
 	
