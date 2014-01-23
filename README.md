@@ -18,7 +18,8 @@ XXAS-X
 ... and the POST ...
 
 ```
-curl -i -X POST --data-binary @identifiers.txt -H "Content-type: text/plain" -u jkeiper https://amrsresearch1.ampath.or.ke:8443/amrs/module/eidinterface/getPatientStatus.htm
+curl -i -X POST --data-binary @identifiers.txt -H "Content-type: text/plain" -u jkeiper \
+  https://amrsresearch1.ampath.or.ke:8443/amrs/module/eidinterface/getPatientStatus.htm
 ```
 
 
